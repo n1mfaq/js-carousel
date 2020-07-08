@@ -85,7 +85,7 @@ function createControls() {
 
 function createStyle() {
     styleContainer = document.createElement('style');
-    let styleCode = `
+    let outerStyle = `
     .controls,
     .slides {
       position: relative;
@@ -102,7 +102,7 @@ function createStyle() {
       border-radius: 10px;
     }`;
 
-    styleContainer.innerHTML = styleCode;
+    styleContainer.innerHTML = outerStyle;
     container.appendChild(styleContainer);
 }
 
@@ -124,7 +124,7 @@ function setListener() {
     indicatorsContainer.addEventListener('click', indicatorsHandler);
 }
 
-function createCarousel(slidesCount = 5) {
+function createCarousel(slidesCount = 7) {
     container = document.querySelector('#carousel');
     createContainer();
     createSlides(slidesCount);
